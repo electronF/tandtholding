@@ -1,0 +1,37 @@
+.menu-tab
+{
+    align-self: auto;
+    padding: 10px 20px;
+    display: flex;
+
+    a
+    {
+        align-self: center;
+        list-style: none;
+    }
+
+    a:hover
+    {
+        color: rgba($color: #FFFFFF, $alpha: 0.5);
+    }
+
+    a:after
+    {
+        content: '';
+        display: block;
+        width: inherit;
+        margin: 0 5px;
+        height: 5px;
+        background-color: transparent;
+    }
+
+    a:hover::after
+    {
+        content: '';
+        display: block;
+        width: inherit;
+        margin: 0 5px;
+        height: 5px;
+        background-color: var(--text-underline);
+    }
+}

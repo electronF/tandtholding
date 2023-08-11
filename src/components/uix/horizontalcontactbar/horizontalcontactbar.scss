@@ -1,0 +1,22 @@
+.horizontal-contact-bar
+{
+    background-color:  var(--contact-bar);
+    padding: 15px 30px;
+    font-size: var();
+    .section 
+    {
+        flex-grow: 1;
+        img
+        {
+            width: 24px;
+            height: 24px;
+            margin: 0 5px;
+            align-self: center;
+        }
+
+        span
+        {
+            align-self: center;
+        }
+    }
+}

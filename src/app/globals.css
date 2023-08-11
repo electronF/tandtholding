@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+  /* Colors */
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;/*214, 219, 220;*/
+  --background-end-rgb: 255, 255, 255;
+  --backgroundColor: #FFFFFF;
+  --contact-bar: #D5D9D8;
+  --frame-border: #FEDD16;
+  --frame-icon: #433A01;
+  --frame-internal: #EDEDED;
+  --button-white: #FFFFFF;
+  --high-light: 255, 255, 255;
+  --banner: #29444F;
+  --section-dark-green: #002F17;
+  --section-green: #2AB572;
+  --text-black: #000000;
+  --text-green: #2AB572;
+  --text-underline: #FFF3A8;
+  --text-white: #FFFFFF;
+  
+  /* FontSize */
+  --menu-medium-font-size: 12px;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}

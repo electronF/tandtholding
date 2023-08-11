@@ -1,0 +1,27 @@
+.service-frame
+{
+    padding: 40px 50px;
+    width: 100%;
+    min-height: fit-content;
+    background-color: var(--section-dark-green);
+
+   .contact-section
+   {
+        align-self: center;
+
+        > img
+        {
+            width: 96px;
+            height: 96px;
+        }
+
+        .contacts
+        {
+            .icon-button
+            {
+                margin: auto 5px;
+                align-self: center;
+            }
+        }
+    }
+}

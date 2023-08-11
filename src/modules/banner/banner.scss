@@ -1,0 +1,19 @@
+.banner
+{
+    height: 400px;
+    width: 100%;
+    background-color: var(--banner);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-attachment: fixed;
+    background-position: center;
+
+    .horizontal-menu-bar
+    {
+        border-bottom: 1px solid rgba(var(--high-light), .5);
+        a
+        {
+            color: var(--text-white);
+        }
+    }
+}

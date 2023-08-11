@@ -1,0 +1,17 @@
+.horizontal-menu-bar
+{
+    padding: 2px 30px;
+    .logo
+    {
+        align-self: auto;
+        width: 66px; 
+        height: 58px;
+    }
+
+    .menu-tabs
+    {
+        align-self: auto;
+        margin-left: auto;
+        display: flex;
+    }
+}
