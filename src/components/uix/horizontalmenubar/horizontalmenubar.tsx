@@ -1,50 +1,66 @@
+'use client';
+
+import { PropsWithChildren, useState } from 'react'
 import Image from 'next/image'
 
 import MenuTab from '@/components/uix/menutab/menutab'
-
-import {default as MenuTabType} from "@/types/link"
+import {default as IconButtonType} from "@/types/iconbutton"
+import Link from "@/types/link"
 
 import './horizontalmenubar.scss'
 
-export default function HorizontalMenuBar() {
-    var menuItems:MenuTabType[] = [
-        {
-            'name': 'acceuil',
-            'link': '/'
-        },
-        {
-            'name': 'contact',
-            'link': '/contact'
-        },
-        {
-            'name': 'qui sommes nous ?',
-            'link': '/a-propos'
-        },
-        {
-            'name': 'nos entreprises',
-            'link': '/nos-entreprises'
-        },
-        {
-            'name': 'avis',
-            'link': '/avis'
-        }
-    ]
-  return (
-    <div className="flex flex-row horizontal-menu-bar">
-        <a href='/'>
-            <Image
-                src={'/assets/logo/logo-square-no-bg.webp'}
-                alt={'tandtholding'}
-                className='logo'
-                width={66*2}
-                height={58*2}
-            />
-        </a>
-        <ul className="flex flex-row justify-end menu-tabs">
-            {
-                menuItems.map((item)=><MenuTab key={'menu-item-'+Math.random()} name={item.name} link={item.link} />)
-            }
-        </ul>
-    </div>
-  )
+
+interface Props extends PropsWithChildren
+{
+    logo: IconButtonType
+    tabs: Link[]
+}
+
+interface CustomTab {
+    key: string
+    tab: Link
+    state: boolean
+}
+
+
+export default function HorizontalMenuBar({logo, tabs}:Props) {
+  function onClick(key:string, tabs:CustomTab[]){
+    for(var tab of tabs){
+        if(tab.key != key)
+            tab.state = false
+        else
+            tab.state = true
+    }
+  }
+
+    let customTabs:CustomTab[] = tabs.map((item)=>{
+        return {'key':'menu-item-'+Math.random(), 'tab':item, 'state':false}
+    })
+    if(customTabs.length > 0) customTabs[0].state = true
+
+    return (
+        <div className="flex flex-row horizontal-menu-bar">
+            <a href={logo.link} title={logo.name??''}>
+                <Image
+                    src={logo.path}
+                    alt={logo.alt??''}
+                    className='logo'
+                    width={400}
+                    height={400}
+                />
+            </a>
+            <ul className="flex flex-row justify-end menu-tabs">
+                {
+                    customTabs.map((item)=><MenuTab 
+                        name={item.tab.name} 
+                        link={item.tab.link} 
+                        isActive = {item.state}
+                        onClick={()=>onClick(item.key, customTabs)}
+                        key={item.key}
+                        />
+                    )
+                }
+            </ul>
+        </div>
+    )
 }

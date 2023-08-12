@@ -16,4 +16,37 @@
             color: var(--text-white);
         }
     }
+
+    .banner-info
+    {
+        height: 100%;
+        color: var(--text-white);
+        justify-content: space-between;
+        padding: 50px;   
+
+        .title
+        {
+            font-size: 52px;
+            font-weight: 700;
+        }
+
+        .content
+        {
+            font-size: 18px;
+        }
+
+        .button
+        {
+            background-color: var(--section-green);
+            color: var(--text-white);
+
+            width: fit-content;
+            padding: 10px 20px;
+        }
+
+        .button:hover
+        {
+            background-color: rgba(var(--section-green-rgb), .8);
+        }
+    }
 }

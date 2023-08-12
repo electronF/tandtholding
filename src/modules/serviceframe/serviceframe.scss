@@ -4,11 +4,11 @@
     width: 100%;
     min-height: fit-content;
     background-color: var(--section-dark-green);
+    overflow-x: scroll;
 
    .contact-section
    {
-        align-self: center;
-
+        margin-right: 50px;
         > img
         {
             width: 96px;
@@ -23,5 +23,28 @@
                 align-self: center;
             }
         }
+    }
+
+    .labeled-list-of-services
+    {
+        color: var(--text-white);
+        margin-right: 50px;
+
+        .clickable-service-item,
+        .unclickable-service-item
+        {
+            font-weight: 300;
+            padding: 5px 0;
+        }
+
+        .clickable-service-item:hover
+        {
+            opacity: 0.8;
+        }
+    }
+
+    .labeled-list-of-services:last-child
+    {
+        margin-right: 0;
     }
 }

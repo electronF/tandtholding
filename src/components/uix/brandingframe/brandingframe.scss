@@ -1,0 +1,26 @@
+.branding-frame
+{
+    width: fit-content;
+    padding: 20px;
+    align-items: center;
+    background-color: var(--frame-internal);
+    color: var(--text-black);
+    border-radius: 13px;
+    border-bottom: 5px solid var(--frame-border);
+
+    .frame-title
+    {
+        font-weight: 700;
+    }
+
+    .frame-image
+    {
+        margin: 30px 0;
+        background-color: red;
+    }
+
+    .frame-content
+    {
+        text-align: center;
+    }
+}

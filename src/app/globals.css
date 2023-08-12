@@ -14,11 +14,14 @@
   --frame-icon: #433A01;
   --frame-internal: #EDEDED;
   --button-white: #FFFFFF;
+  --button-white-rgb: 255, 255, 255;
   --high-light: 255, 255, 255;
   --banner: #29444F;
   --section-dark-green: #002F17;
   --section-green: #2AB572;
+  --section-green-rgb: 42, 181, 114;
   --text-black: #000000;
+  --text-dark-green: #002F17;
   --text-green: #2AB572;
   --text-underline: #FFF3A8;
   --text-white: #FFFFFF;

@@ -1,0 +1,40 @@
+.compagny-presentation:first-child
+{
+    align-items: center;
+}
+
+.compagny-presentation
+{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow-x: scroll;
+
+    .presentation-title
+    {
+        color: var(--text-dark-green);
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+
+    .branding-frame
+    {
+        margin: 0 50px;
+        width: 220px;
+
+        height: --webkit-fill-available;
+        height: --moz-fill-available;
+    }
+
+    .branding-frame:first-child
+    {
+        margin-left: 0;
+    }
+
+    .branding-frame:last-child
+    {
+        margin-right: 0;
+    }
+}

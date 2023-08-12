@@ -1,0 +1,35 @@
+.compagny-frame
+{
+    align-items: center;
+    .frame-title
+    {
+        font-size: 22px;
+        font-weight: 700;
+        width: fit-content;
+    }
+
+    .frame-content
+    {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 30px;
+        width: fit-content;
+        height: --webkit-fill-available;
+        height: --moz-fill-available;
+        height: fill-available;
+        text-align: center;
+    }
+
+    .frame-button
+    {
+        background-color: var(--button-white);
+        padding: 10px 20px;
+        color: var(--text-black);
+        width: fit-content;
+    }
+
+    .frame-button:hover
+    {
+        background-color: rgba(var(--button-white-rgb), .8);
+    }
+}

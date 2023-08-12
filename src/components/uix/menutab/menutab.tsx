@@ -1,4 +1,6 @@
-import { Children, PropsWithChildren } from "react";
+'use client';
+
+import {MouseEventHandler, PropsWithChildren } from "react";
 
 import { capitalize } from "@/utils/text"
 import Link from "@/types/link";
@@ -9,13 +11,15 @@ interface Props extends PropsWithChildren
 {
     name: string
     link: string
+    isActive: boolean
+    onClick: MouseEventHandler<HTMLLIElement> | undefined
 }
 
-export default function MenuTab({name, link}:Props)
+export default function MenuTab({name, link, onClick, isActive}:Props)
 {
     return (
-        <li className="menu-tab">
-            <a href={link}>{capitalize(name)}</a>
+        <li className="menu-tab is-active" onClick={onClick}>
+            <a href={link} className={(isActive)?'tab-is-active':''}>{capitalize(name)}</a>
         </li>
     )
 }

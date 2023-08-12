@@ -1,0 +1,43 @@
+.our-compagnies
+{
+    padding: 50px;
+    overflow-x: scroll;
+    width: 100%;
+    color: var(--text-white);
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    .title
+    {
+        font-size: 26px;
+        font-weight: 700;
+
+        margin-bottom: 40px;
+    }
+
+    .content
+    {
+        font-size: 18px;
+        margin-bottom: 100px;
+    }
+
+    .compagnies
+    {
+        justify-content: space-around;
+        .compagny-frame
+        {
+            margin-right: 30px;
+            max-width: 400px;
+        }
+
+        .compagny-frame:last-child
+        {
+            margin-right: 0;
+        }
+    }
+
+    
+}

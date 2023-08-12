@@ -24,14 +24,14 @@
         height: 5px;
         background-color: transparent;
     }
+}
 
-    a:hover::after
-    {
-        content: '';
-        display: block;
-        width: inherit;
-        margin: 0 5px;
-        height: 5px;
-        background-color: var(--text-underline);
-    }
+.tab-is-active:after:hover::after
+{
+    content: '';
+    display: block;
+    width: inherit;
+    margin: 0 5px;
+    height: 5px;
+    background-color: var(--text-underline);
 }
