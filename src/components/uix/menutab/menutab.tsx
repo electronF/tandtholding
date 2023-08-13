@@ -18,8 +18,9 @@ interface Props extends PropsWithChildren
 export default function MenuTab({name, link, onClick, isActive}:Props)
 {
     return (
-        <li className="menu-tab is-active" onClick={onClick}>
-            <a href={link} className={(isActive)?'tab-is-active':''}>{capitalize(name)}</a>
+        <li className="flex flex-col menu-tab" onClick={onClick}>
+            <a href={link}>{capitalize(name)}</a>
+            <span className={(isActive)?'tab-is-active':''}></span>
         </li>
     )
 }

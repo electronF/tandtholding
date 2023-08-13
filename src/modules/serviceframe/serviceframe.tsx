@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 
 import LabeledListOfServices from "../labeledlistofservices/labeledlistofservices";
-import IconButton from "@/components/iconbutton/iconbutton";
+import IconButton from "@/components/uix/iconbutton/iconbutton";
 
 import { default as IconButtonType } from "@/types/iconbutton";
 import Service from "@/types/service";
@@ -19,7 +19,7 @@ interface Props extends PropsWithChildren {
 
 export default function ServiceFrame({ contacts, logo, services }: Props) {
   return (
-    <section className="flex flex-row justify-start service-frame">
+    <footer className="flex flex-row justify-start service-frame">
       <div className="flex flex-col contact-section">
         <IconButton
           name={logo.name}
@@ -67,6 +67,6 @@ export default function ServiceFrame({ contacts, logo, services }: Props) {
           </LabeledListOfServices>
         ))}
       </div>
-    </section>
+    </footer>
   );
 }

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import {default as IconButtonType} from '@/types/iconbutton'
 
 import './horizontalcontactbar.scss';
-import IconButton from '@/components/iconbutton/iconbutton';
+import IconButton from '@/components/uix/iconbutton/iconbutton';
 
 
 

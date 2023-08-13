@@ -2,7 +2,6 @@
 {
     align-self: auto;
     padding: 10px 20px;
-    display: flex;
 
     a
     {
@@ -15,23 +14,17 @@
         color: rgba($color: #FFFFFF, $alpha: 0.5);
     }
 
-    a:after
+    span
     {
-        content: '';
-        display: block;
         width: inherit;
         margin: 0 5px;
         height: 5px;
         background-color: transparent;
     }
+    
 }
 
-.tab-is-active:after:hover::after
+.tab-is-active
 {
-    content: '';
-    display: block;
-    width: inherit;
-    margin: 0 5px;
-    height: 5px;
-    background-color: var(--text-underline);
+    background-color: var(--text-underline) !important;
 }

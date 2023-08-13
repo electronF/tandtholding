@@ -1,0 +1,48 @@
+.branding-about-frame
+{
+    padding: 20px 40px;
+    background-color: var(--frame-internal);
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px 13px 0 0;
+    border-left: 5px solid var(--frame-border);
+    border-top:  5px solid var(--frame-border);
+
+    .frame-title
+    {
+        font-size: 24px;
+        color: var(--text-green);
+        justify-content: flex-start;
+        text-align: center;
+
+        .title-label
+        {
+            font-weight: 700;
+        }
+    }
+
+    .frame-content
+    {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 300;
+        color: var(--text-black);
+        padding: 30px 20px 20px 20px;
+        width: fit-content;
+    }
+
+    .frame-button
+    {
+        font-weight: 300;
+        width: fit-content;
+        border: 1px solid var(--section-green);
+        background-color: var(--button-white);
+        padding: 10px 20px;
+    }
+
+    .frame-button:hover
+    {
+        background-color: rgba(var(--button-white-rgb), 0.8);
+    }
+
+}

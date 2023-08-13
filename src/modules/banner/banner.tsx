@@ -20,8 +20,9 @@ export default function Banner({menuBarInfo, bannerInfo, bannerShouldBeDisplayed
     <section 
         className='flex flex-col justify-start banner' 
         style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(${bannerInfo?.backgroundImagePath})`, 
-            backgroundColor:bannerInfo?.backgroundColor
+            backgroundImage: (bannerShouldBeDisplayed==true)?`linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(${bannerInfo?.backgroundImagePath})`:'', 
+            backgroundColor:bannerInfo?.backgroundColor,
+            height:  (bannerShouldBeDisplayed==true)?`400px`:'auto'
             }}
     >
         <HorizontalMenuBar  logo={menuBarInfo.logo} tabs={menuBarInfo.tabs}/>

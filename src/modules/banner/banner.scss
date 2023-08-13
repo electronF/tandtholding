@@ -1,6 +1,5 @@
 .banner
 {
-    height: 400px;
     width: 100%;
     background-color: var(--banner);
     background-repeat: no-repeat;
@@ -22,7 +21,7 @@
         height: 100%;
         color: var(--text-white);
         justify-content: space-between;
-        padding: 50px;   
+        padding: 50px 70px;   
 
         .title
         {
@@ -37,6 +36,7 @@
 
         .button
         {
+            font-weight: 300;
             background-color: var(--section-green);
             color: var(--text-white);
 
