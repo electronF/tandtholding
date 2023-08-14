@@ -16,6 +16,7 @@ import {default as ContactFrameType} from '@/types/contactframe';
 import AboutUsPage from '@/pages/aboutus/aboutus';
 import OurCompagnies from '@/pages/ourcompagnies/ourcompagnies';
 import CustomerOpignions from '@/pages/customeropignions/customeropignions';
+import JoinOurTeamPage from '@/pages/joinourteam/joinourteam';
 
 
 export default function Home() {
@@ -187,6 +188,10 @@ export default function Home() {
         link: "/",
       },
       {
+        name: "nous rejoindre",
+        link: "/",
+      },
+      {
         name: "avis",
         link: "/",
       },
@@ -280,6 +285,15 @@ export default function Home() {
         contactBarInfo = {contactBarInfo}
         bannerInfo = {bannerInfo}
       />
+      {/* <JoinOurTeamPage 
+        logo = {logo}
+        menuBarInfo = {menuBarInfo}
+        services = {services}
+        socialMedia = {socialMedia}
+        contactBarInfo = {contactBarInfo}
+        bannerInfo = {bannerInfo}
+        compagnyBranding = {compagnyBranding}
+      /> */}
     </>
     
   )

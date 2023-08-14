@@ -1,4 +1,25 @@
 .empty-section
 {
     flex: 1;
+
+    flex-direction: column;
+
+    .customer-opignions-title
+    {
+        color: var(--text-dark-green);
+        font-size: 32px;
+        font-weight: 700;
+        margin-top: 0px;
+        margin-bottom: 50px;
+        width: 80%;
+    }
+
+    .customers-opignions-list
+    {
+        .customer-opignion-frame
+        {
+            width: 80%;
+            margin: 20px 0;
+        }   
+    }
 }

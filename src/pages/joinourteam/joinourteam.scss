@@ -1,0 +1,56 @@
+.empty-section
+{
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+
+    .join-our-team-information
+    {
+        flex: 1 0 45%;
+        margin-right: 30px;
+
+        .join-our-team-presentation
+        {
+            .join-our-team-presentation-title
+            {
+                color: var(--text-dark-green);
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+
+            .join-our-team-presentation-content
+            {
+                font-size: 18px;
+                color: var(--text-black);
+            }
+        }
+
+        .join-our-team-form
+        {
+            width: 100%;
+            margin-top: 20px;
+            .form-field
+            {
+                width: 100%;
+                margin: 10px 0;
+            }
+            
+            button
+            {
+                margin-top: 20px;
+                padding: 10px 20px;
+                width: fit-content;
+                color: var(--text-white);
+                background-color: var(--button-green);
+
+                font-weight: 300;
+            }
+        }
+    }
+
+    .image-frame
+    {
+        flex: 1 0 45%;
+    }
+}

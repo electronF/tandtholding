@@ -10,26 +10,46 @@ interface Props extends PropsWithChildren
     name: string
     logoPath: string
     content: string
-    button?: Link
+    button?: Link,
+    orientation?: 'vertical'|'horizontal'
 }
 
 
-export default function CompagnyFrame({name, logoPath, content, button}:Props){
+export default function CompagnyFrame({name, logoPath, content, button, orientation}:Props){
     return (
-        <div className="flex flex-col compagny-frame">
-            <h3 className="frame-title">{name}</h3>
-            <IconButton
-                name={name}
-                alt={name}
-                path={logoPath}
-                link={(button != undefined)?button.link:''}
-                width={200}
-                height={200} 
-            />
-            <p className="frame-content">{content}</p>
-            {
-                (button != undefined)?<a href={button.link} className="frame-button">{button.name}</a>:null
-            }
-        </div>
+        (orientation != undefined && orientation == 'vertical')?
+            <div className="flex flex-col compagny-frame compagny-frame-aligment-vertical">
+                <h3 className="frame-title">{name}</h3>
+                <IconButton
+                    name={name}
+                    alt={name}
+                    path={logoPath}
+                    link={(button != undefined)?button.link:''}
+                    width={200}
+                    height={200} 
+                />
+                <p className="frame-content">{content}</p>
+                {
+                    (button != undefined)?<a href={button.link} className="frame-button">{button.name}</a>:null
+                }
+            </div>
+            :<div className="flex flex-row compagny-frame compagny-frame-aligment-horizontal">
+                <IconButton
+                    name={name}
+                    alt={name}
+                    path={logoPath}
+                    link={(button != undefined)?button.link:''}
+                    width={200}
+                    height={200} 
+                />
+                <div>
+                    <h3 className="frame-title">{name}</h3>
+                    <p className="frame-content">{content}</p>
+                    {
+                        (button != undefined)?<a href={button.link} className="frame-button">{button.name}</a>:null
+                    }
+                </div>
+            </div>
+
     )
 }

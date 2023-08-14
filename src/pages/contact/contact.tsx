@@ -5,6 +5,8 @@ import { ChangeEvent, ChangeEventHandler, PropsWithChildren } from "react";
 import HeaderBar from "@/modules/headerbar/headerbar";
 import Footer from "@/modules/footer/footer";
 import EmptySection from "@/modules/emptysection/emptysection";
+import FormField from "@/components/user/formfield/formfield";
+import LabeledSection from "@/modules/labeledsection/labeledsection";
 
 import BannerInfo from "@/types/bannerinfo";
 import ContactBarInfo from "@/types/contactbarinfo";
@@ -17,8 +19,7 @@ import BrandingAbout from "@/types/brandingabout";
 import { default as ContactFrameType } from "@/types/contactframe";
 
 import "./contact.scss";
-import TextInput from "@/components/user/textinput/textinput";
-import LabeledSection from "@/modules/labeledsection/labeledsection";
+
 
 interface Props extends PropsWithChildren {
   logo: IconButtonType;
@@ -77,12 +78,12 @@ export default function ContactPage({
           <p className="content">{contactUs.content}</p>
           <form action="">
             <div className="flex flex-col">
-                <TextInput type="text" name="username" placeHolder={'Nom et Prenom'} value={''} handlePress={(event:any)=>onEditField(event)} />
-                <TextInput type="phone" name="phone" placeHolder={'Telephone'} value={''}  handlePress={(event:any)=>onEditField(event)} />
-                <TextInput type="email" name="email" placeHolder={'Email'} value={''}  handlePress={(event:any)=>onEditField(event)} />
+                <FormField type="text" name="username" placeHolder={'Nom et Prenom'} value={''} handlePress={(event:any)=>onEditField(event)} />
+                <FormField type="phone" name="phone" placeHolder={'Telephone'} value={''}  handlePress={(event:any)=>onEditField(event)} />
+                <FormField type="email" name="email" placeHolder={'Email'} value={''}  handlePress={(event:any)=>onEditField(event)} />
             </div>
             <div className="flex flex-col">
-                <TextInput type="text" multiline={true} name="description" placeHolder={'Decrivez votre projet ici'} value={''} handlePress={(event:any)=>onEditField(event)} />
+                <FormField type={"textarea"} name="description" placeHolder={'Decrivez votre projet ici'} value={''} handlePress={(event:any)=>onEditField(event)} />
                 <button type="submit">{'ENVOYER'}</button>
             </div>
           </form>

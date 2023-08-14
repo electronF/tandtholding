@@ -1,0 +1,50 @@
+.customer-opignion-frame
+{
+    .customer-image
+    {
+        min-width: 200px;
+        min-height: 200px;
+        max-height: 150px;
+        background-color: var(--section-green);
+    }
+
+    .customer-opignion
+    {
+        color: var(--text-black);
+        margin-left: 30px;
+
+        >*
+        {
+            margin:5px 0;
+        }
+
+        .quotation
+        {
+            margin-top: 0;
+            width: 40px;
+            height: 40px;
+            font-size: 96px;
+            font-weight: 700;
+            // margin-bottom: 20px;
+        }
+
+        .customer-opignion
+        {
+            font-size: 18px;
+        }
+
+        .customer-name
+        {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .customer-role
+        {
+            margin-bottom: 0;
+            font-size: 18px;
+            font-weight: 200;
+        }
+    }
+
+}

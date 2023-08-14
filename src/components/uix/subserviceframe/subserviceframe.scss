@@ -1,0 +1,15 @@
+.sub-service-frame
+{
+    img
+    {
+        background-color: var(--section-green);
+        min-width: 100px !important;
+        min-height: 100px !important;
+        max-height: 100px;
+    }
+
+    .sub-service-frame-presentation
+    {
+        margin-left: 20px;
+    }
+}

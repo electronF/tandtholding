@@ -2,8 +2,8 @@ interface CustomerOpigion
 {
     imagePath:string
     content:string
-    name:string
-    role:string
+    customerName:string
+    customerRole:string
 }
 
 export default CustomerOpigion

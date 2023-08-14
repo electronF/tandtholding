@@ -12,8 +12,7 @@ import Service from "@/types/service";
 
 import "./customeropignions.scss";
 import CustomerOpigion from "@/types/customeropignion";
-
-
+import CustomerOpignionFrame from "@/components/uix/customeropignionframe/customeropignionframe";
 
 interface Props extends PropsWithChildren {
   logo: IconButtonType;
@@ -30,24 +29,26 @@ export default function CustomerOpignions({
   services,
   socialMedia,
   contactBarInfo,
-  bannerInfo
+  bannerInfo,
 }: Props) {
-  
-  var title =  'Ce que nos clients pensent de nous'
-  var opignions:CustomerOpigion[] = [
+  var title = "Ce que nos clients pensent de nous";
+  var customersOpignions: CustomerOpigion[] = [
     {
-      'imagePath':'',
-      'content':"temoignage client sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa",
-      'name': "Carole Jeanne",
-      'role': 'Commerciale Afrilex'
+      imagePath: "",
+      content:
+        "temoignage client sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa",
+      customerName: "Carole Jeanne",
+      customerRole: "Commerciale Afrilex",
     },
     {
-      'imagePath':'',
-      'content':"temoignage client sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa",
-      'name': "Jean Claude",
-      'role': 'Architecte Qzure'
+      imagePath: "",
+      content:
+        "temoignage client sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa",
+      customerName: "Jean Claude",
+      customerRole: "Architecte Qzure",
     },
-  ]
+  ];
+  ("“““‘{¶«¡Çøø}—€ôÙµ¬÷…≠÷…≤ëë“‘");
 
   return (
     <>
@@ -59,6 +60,18 @@ export default function CustomerOpignions({
       />
       <main className="flex min-h-screen flex-col">
         <EmptySection>
+          <h1 className="customer-opignions-title">{title}</h1>
+          <div className="flex flex-col customers-opignions-list">
+            {customersOpignions.map((customerOpignion) => (
+              <CustomerOpignionFrame
+                imagePath={customerOpignion.imagePath}
+                content={customerOpignion.content}
+                customerName={customerOpignion.customerName}
+                customerRole={customerOpignion.customerRole}
+                key={"customer-opignion-" + Math.random()}
+              />
+            ))}
+          </div>
         </EmptySection>
       </main>
       <Footer logo={logo} socialMedia={socialMedia} services={services} />

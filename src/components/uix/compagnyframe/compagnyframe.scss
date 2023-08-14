@@ -34,3 +34,37 @@
         background-color: rgba(var(--button-white-rgb), .8);
     }
 }
+
+.compagny-frame-aligment-horizontal
+{
+    >div
+    {
+        margin-left: 30px;
+        .frame-title
+        {
+            color: var(--text-green);
+            font-size: 20px;
+            text-align: start;
+        }
+
+        .frame-content
+        {
+            margin-top: 10px;
+            font-size: 18px;
+            text-align: start;
+        }
+    }
+}
+
+.compagny-frame-aligment-vertical
+{
+    .frame-title
+    {
+        color: var(--text-black);
+    }
+
+    .frame-content
+    {
+        margin-bottom: 30px;
+    }
+}
