@@ -3,7 +3,7 @@ import Link from "./link"
 interface Service
 {
     name: String
-    links: Link[]
+    subServices: Link[]
 }
 
 export default Service

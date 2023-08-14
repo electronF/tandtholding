@@ -1,0 +1,168 @@
+.header-bar
+{
+    .banner
+    {
+        .horizontal-menu-bar
+        {
+            border: none;
+        }
+    }
+}
+
+.empty-section
+{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .presentation
+    {
+        width: 100%;
+        align-items: center;
+
+        .presentation-title
+        {
+            color: var(--text-dark-green);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            width: 80%;
+        }
+
+        .presentation-content
+        {
+            width: 80%;
+            font-size: 18px;
+            color: var(--text-black);
+        }
+    }
+
+    .services-frame
+    {
+        margin: 50px 0;
+        width: 100%;
+        align-items: center;
+
+        .services-frame-title
+        {
+            color: var(--text-dark-green);
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            width: 80%;
+        }
+
+        .services-frame-services
+        {
+            width: 100%;
+            height: fit-content;
+            
+            .service-frame
+            {
+                flex: 1;
+                margin: 0 20px;
+            }
+
+            .service-frame:first-child
+            {
+                margin-left: 0;
+            }
+
+            .service-frame:last-child
+            {
+                margin-right: 0;
+            }
+            
+        }
+    }
+}
+
+.empty-section:nth-child(3)
+{
+    padding: 0;
+    width: 100%;
+    align-items: center;
+
+    .partnership
+    {
+        width: inherit;
+        justify-content: center;
+        align-items: center;
+
+        .partnership-title
+        {
+            color: var(--text-dark-green);
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .partnership-content
+        {
+            font-size: 18px;
+            margin-bottom: 50px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .partnership-partners
+        {
+            background-color: var(--frame-internal);
+            padding: 20px 50px;
+            width: 100%;
+
+            .icon-button
+            {
+                margin: 0 25px;
+                background-color: white;
+            }
+
+            .icon-button:first-child
+            {
+                margin-left: 0;
+            }
+
+            .icon-button:last-child
+            {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.empty-section:nth-child(4)
+{
+    .presentation-title
+    {
+        color: var(--text-dark-green);
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+
+    .brandings
+    {
+        .branding-frame
+        {
+            margin: 0 50px;
+            width: 220px;
+
+            height: --webkit-fill-available;
+            height: --moz-fill-available;
+        }
+
+        .branding-frame:first-child
+        {
+            margin-left: 0;
+        }
+
+        .branding-frame:last-child
+        {
+            margin-right: 0;
+        }
+    }
+}

@@ -4,7 +4,7 @@ interface ContactBarInfo
 {
     phone: string
     email: string
-    contacts: IconButton[]
+    socialMedia: IconButton[]
 }
 
 export default ContactBarInfo

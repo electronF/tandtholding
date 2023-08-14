@@ -1,4 +1,4 @@
-import IconButton from "@/components/iconbutton/iconbutton";
+import IconButton from "@/components/uix/iconbutton/iconbutton";
 import Link from "@/types/link";
 import { PropsWithChildren } from "react";
 

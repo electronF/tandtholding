@@ -3,8 +3,8 @@
 import { ChangeEvent, ChangeEventHandler, PropsWithChildren } from "react";
 
 import HeaderBar from "@/modules/headerbar/headerbar";
-import ServiceFrame from "@/modules/serviceframe/serviceframe";
-import CompagnyPresentation from "@/modules/compagnypresentation/compagnypresentation";
+import Footer from "@/modules/footer/footer";
+import EmptySection from "@/modules/emptysection/emptysection";
 
 import BannerInfo from "@/types/bannerinfo";
 import ContactBarInfo from "@/types/contactbarinfo";
@@ -24,7 +24,7 @@ interface Props extends PropsWithChildren {
   logo: IconButtonType;
   menuBarInfo: menuBarInfo;
   services: Service[];
-  contacts: IconButtonType[];
+  socialMedia: IconButtonType[];
   contactFrame: ContactFrameType;
   contactBarInfo: ContactBarInfo;
   bannerInfo: BannerInfo;
@@ -37,7 +37,7 @@ export default function ContactPage({
   logo,
   menuBarInfo,
   services,
-  contacts,
+  socialMedia,
   contactBarInfo,
   bannerInfo,
 }: Props) {
@@ -72,7 +72,7 @@ export default function ContactPage({
         bannerInfo={bannerInfo}
       />
       <main className="flex min-h-screen flex-col items-center">
-        <CompagnyPresentation>
+        <EmptySection>
           <h1 className="title">{contactUs.title}</h1>
           <p className="content">{contactUs.content}</p>
           <form action="">
@@ -96,9 +96,9 @@ export default function ContactPage({
           <div className="contact-map">
 
           </div>
-        </CompagnyPresentation>
+        </EmptySection>
       </main>
-      <ServiceFrame logo={logo} contacts={contacts} services={services} />
+      <Footer logo={logo} socialMedia={socialMedia} services={services} />
     </>
   );
 }

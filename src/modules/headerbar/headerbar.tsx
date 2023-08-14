@@ -20,8 +20,8 @@ interface Props extends PropsWithChildren
 
 export default function HeaderBar({bannerInfo, contactBarInfo, menuBarInfo, bannerShouldBeDisplayed}:Props) {
     return (
-    <header className='flex flex-col'>
-        <HorizontalContactBar email={contactBarInfo.email} phone={contactBarInfo.phone} contacts={contactBarInfo.contacts}  />
+    <header className='flex flex-col header-bar'>
+        <HorizontalContactBar email={contactBarInfo.email} phone={contactBarInfo.phone} socialMedia={contactBarInfo.socialMedia}  />
         <Banner menuBarInfo={menuBarInfo} bannerInfo={bannerInfo} bannerShouldBeDisplayed={bannerShouldBeDisplayed} />
     </header>
     )

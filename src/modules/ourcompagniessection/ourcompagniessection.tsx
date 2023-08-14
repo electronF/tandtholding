@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 
 import Compagny from "@/types/compagny";
 
-import "./ourcompagnies.scss";
+import "./ourcompagniessection.scss";
 import CompagnyFrame from "@/components/uix/compagnyframe/compagnyframe";
 
 interface Props extends PropsWithChildren {
@@ -13,7 +13,7 @@ interface Props extends PropsWithChildren {
   compagnies: Compagny[];
 }
 
-export default function OurCompagnies({
+export default function OurCompagniesSection({
   title,
   content,
   compagnies,
@@ -22,7 +22,7 @@ export default function OurCompagnies({
 }: Props) {
   return (
     <section
-      className="flex flex-col justify-center our-compagnies"
+      className="flex flex-col justify-center our-compagnies-section"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backgoundImagePath})`,
         backgroundColor: backgroundColor,

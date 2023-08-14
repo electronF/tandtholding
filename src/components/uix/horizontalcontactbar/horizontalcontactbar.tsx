@@ -12,11 +12,11 @@ interface Props extends PropsWithChildren
 {
     phone:String
     email: String
-    contacts: IconButtonType[]
+    socialMedia: IconButtonType[]
 }
 
 
-export default function HorizontalContactBar({phone, email, contacts}:Props) {
+export default function HorizontalContactBar({phone, email, socialMedia}:Props) {
     
   return (
 
@@ -43,7 +43,7 @@ export default function HorizontalContactBar({phone, email, contacts}:Props) {
         </div>
         <div className='flex flex-row section justify-end'>
             {
-                contacts.map((item)=>(
+                socialMedia.map((item)=>(
                     <IconButton
                         name={item.name}
                         alt={item.alt}

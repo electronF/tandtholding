@@ -2,10 +2,10 @@ import { PropsWithChildren } from "react";
 
 import ContactFrame from "@/modules/contactframe/contactframe";
 import HeaderBar from "@/modules/headerbar/headerbar";
-import ServiceFrame from "@/modules/serviceframe/serviceframe";
-import OurCompagnies from "@/modules/ourcompagnies/ourcompagnies";
+import Footer from "@/modules/footer/footer";
+import OurCompagniesSection from "@/modules/ourcompagniessection/ourcompagniessection";
 import BrandingFrame from "@/components/uix/brandingframe/brandingframe";
-import CompagnyPresentation from "@/modules/compagnypresentation/compagnypresentation";
+import EmptySection from "@/modules/emptysection/emptysection";
 import BrandingAboutFrame from "@/components/uix/brandingaboutframe/brandingaboutframe";
 
 import BannerInfo from "@/types/bannerinfo";
@@ -24,7 +24,7 @@ interface Props extends PropsWithChildren {
   logo: IconButtonType;
   menuBarInfo: menuBarInfo;
   services: Service[];
-  contacts: IconButtonType[];
+  socialMedia: IconButtonType[];
   contactFrame: ContactFrameType;
   contactBarInfo: ContactBarInfo;
   bannerInfo: BannerInfo;
@@ -37,7 +37,7 @@ export default function HomePage({
   logo,
   menuBarInfo,
   services,
-  contacts,
+  socialMedia,
   contactFrame,
   contactBarInfo,
   bannerInfo,
@@ -54,16 +54,16 @@ export default function HomePage({
         bannerInfo={bannerInfo}
       />
       <main className="flex min-h-screen flex-col items-center">
-        <CompagnyPresentation>
+        <EmptySection>
           <BrandingAboutFrame
             titleLabel={aboutFrame.titleLabel}
             title={aboutFrame.title}
             content={aboutFrame.content}
             button={aboutFrame.button}
           />
-        </CompagnyPresentation>
+        </EmptySection>
 
-        <OurCompagnies
+        <OurCompagniesSection
           title={ourCompagnies.title}
           content={ourCompagnies.content}
           compagnies={ourCompagnies.compagnies}
@@ -71,7 +71,7 @@ export default function HomePage({
           backgroundColor={ourCompagnies.backgroundColor}
         />
 
-        <CompagnyPresentation>
+        <EmptySection>
           <h2 className="presentation-title">{compagnyBranding.title}</h2>
           <div className="flex flex-row justify-center brandings">
             {compagnyBranding.brandings.map((branding) => (
@@ -84,7 +84,7 @@ export default function HomePage({
               />
             ))}
           </div>
-        </CompagnyPresentation>
+        </EmptySection>
 
         <ContactFrame
           title={contactFrame.title}
@@ -92,7 +92,7 @@ export default function HomePage({
           link={contactFrame.link}
         />
       </main>
-      <ServiceFrame logo={logo} contacts={contacts} services={services} />
+      <Footer logo={logo} socialMedia={socialMedia} services={services} />
     </>
   );
 }

@@ -1,6 +1,7 @@
-.compagny-presentation:first-child
+.empty-section:first-child
 {
     align-items: center;
+    flex-direction: column;
 
     .branding-about-frame
     {
@@ -8,7 +9,7 @@
     }
 }
 
-.compagny-presentation
+.empty-section
 {
     align-items: center;
     flex-direction: column;

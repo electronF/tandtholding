@@ -13,6 +13,9 @@ import Branding from "@/types/branding";
 import CompagnyBranding from "@/types/compagnybranding";
 import BrandingAbout from "@/types/brandingabout";
 import {default as ContactFrameType} from '@/types/contactframe';
+import AboutUsPage from '@/pages/aboutus/aboutus';
+import OurCompagnies from '@/pages/ourcompagnies/ourcompagnies';
+import CustomerOpignions from '@/pages/customeropignions/customeropignions';
 
 
 export default function Home() {
@@ -25,76 +28,66 @@ export default function Home() {
   var services: Service[] = [
     {
       name: "services management",
-      links: [
+      subServices: [
         {
           name: "Consultation stratégique",
           link: "",
-          clickable: true,
         },
         {
           name: "Planification financière",
           link: "",
-          clickable: true,
         },
         {
           name: "Developpement",
           link: "",
-          clickable: true,
         },
         {
           name: "Commercial",
           link: "",
-          clickable: true,
         },
       ],
     },
     {
       name: "services immo",
-      links: [
+      subServices: [
         {
           name: "Placement de terrain",
           link: "",
-          clickable: true,
         },
         {
           name: "Placement de logement",
           link: "",
-          clickable: true,
         },
         {
           name: "Vente de terrain",
           link: "",
-          clickable: true,
         },
         {
           name: "Location immobiliere",
           link: "",
-          clickable: true,
-        },
-      ],
-    },
-    {
-      name: "nous contactez",
-      links: [
-        {
-          name: "Adresse entreprise",
-          link: "",
-          clickable: false,
-        },
-        {
-          name: "+237 XXX XXX XXX",
-          link: "",
-          clickable: false,
-        },
-        {
-          name: "email@ttholding.com",
-          link: "",
-          clickable: true,
         },
       ],
     },
   ];
-  var contacts: IconButtonType[] = [
+  var contacts =  {
+    title: "nous contactez",
+    contacts: [
+      {
+        content: "Adresse entreprise",
+        type: "adress",
+      },
+      {
+        content: "+237 XXX XXX XXX",
+        link: "phone",
+      },
+      {
+        content: "email@ttholding.com",
+        link: "email",
+      },
+    ],
+  }
+
+  var socialMedia: IconButtonType[] = [
     {
       name: "facebook",
       alt: "facebook",
@@ -128,13 +121,13 @@ export default function Home() {
   var contactBarInfo: ContactBarInfo = {
     phone: "+237 XXX XXX XXX",
     email: "contact@nomdedomaine.com",
-    contacts: contacts,
+    socialMedia: socialMedia,
   };
 
   
 
   var bannerInfo: BannerInfo = {
-    backgroundImagePath: "../assets/images/background.webp",
+    backgroundImagePath: "../assets/images/background-6.webp",
     backgroundColor: "#002F17",
     title: "BIENVENU CHEZ T & T HOLDING",
     content: "L'expérience et l'expertise qui font la difference",
@@ -159,7 +152,6 @@ export default function Home() {
         button: {
           name: "Voir nos services",
           link: "/",
-          clickable: true,
         },
       },
       {
@@ -169,8 +161,7 @@ export default function Home() {
           "T&T Imo se spécialise dans les placements immobiliers, offrant des opportunités uniques pour l'achat, la vente et la location de biens immobiliers",
         button: {
           name: "Voir nos services",
-          link: "/",
-          clickable: true,
+          link: "/"
         },
       },
     ],
@@ -243,7 +234,7 @@ export default function Home() {
         logo = {logo}
         menuBarInfo = {menuBarInfo}
         services = {services}
-        contacts = {contacts}
+        socialMedia = {socialMedia}
         contactFrame = {contactFrame}
         contactBarInfo = {contactBarInfo}
         bannerInfo = {bannerInfo}
@@ -251,17 +242,43 @@ export default function Home() {
         compagnyBranding = {compagnyBranding}
         aboutFrame = {aboutFrame}
       /> */}
-      <ContactPage 
+      {/* <ContactPage 
         logo = {logo}
         menuBarInfo = {menuBarInfo}
         services = {services}
-        contacts = {contacts}
+        socialMedia = {socialMedia}
         contactFrame = {contactFrame}
         contactBarInfo = {contactBarInfo}
         bannerInfo = {bannerInfo}
         ourCompagnies = {ourCompagnies}
         compagnyBranding = {compagnyBranding}
         aboutFrame = {aboutFrame}
+      /> */}
+      {/* <AboutUsPage 
+        logo = {logo}
+        menuBarInfo = {menuBarInfo}
+        services = {services}
+        socialMedia = {socialMedia}
+        contactBarInfo = {contactBarInfo}
+        bannerInfo = {bannerInfo}
+        compagnyBranding = {compagnyBranding}
+      /> */}
+      {/* <OurCompagnies
+        logo = {logo}
+        menuBarInfo = {menuBarInfo}
+        services = {services}
+        socialMedia = {socialMedia}
+        contactFrame = {contactFrame}
+        contactBarInfo = {contactBarInfo}
+        bannerInfo = {bannerInfo}
+      /> */}
+      <CustomerOpignions
+        logo = {logo}
+        menuBarInfo = {menuBarInfo}
+        services = {services}
+        socialMedia = {socialMedia}
+        contactBarInfo = {contactBarInfo}
+        bannerInfo = {bannerInfo}
       />
     </>
     

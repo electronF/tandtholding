@@ -8,18 +8,18 @@ import Service from "@/types/service";
 
 import { capitalize } from "@/utils/text";
 
-import "./serviceframe.scss";
+import "./footer.scss";
 
 
 interface Props extends PropsWithChildren {
-  contacts: IconButtonType[];
+  socialMedia: IconButtonType[];
   logo: IconButtonType;
   services: Service[];
 }
 
-export default function ServiceFrame({ contacts, logo, services }: Props) {
+export default function Footer({ socialMedia, logo, services }: Props) {
   return (
-    <footer className="flex flex-row justify-start service-frame">
+    <footer className="flex flex-row justify-start footer">
       <div className="flex flex-col contact-section">
         <IconButton
           name={logo.name}
@@ -30,7 +30,7 @@ export default function ServiceFrame({ contacts, logo, services }: Props) {
           link={logo.link}
         />
         <div className="flex flex-row justify-center contacts">
-          {contacts.map((menuItem) => (
+          {socialMedia.map((menuItem) => (
             <IconButton
               name={menuItem.name}
               alt={menuItem.alt}
@@ -49,21 +49,20 @@ export default function ServiceFrame({ contacts, logo, services }: Props) {
             name={service.name}
             key={"list-of-services-" + Math.random()}
           >
-            {service.links.map((link) =>
-              link.clickable == true ? (
+            {service.subServices.map((subService) =>
                 <a
-                  href={link.link}
+                  href={subService.link}
                   className="clickable-service-item"
                   key={"list-of-service-item-" + Math.random()}
                 >
-                  {link.name}
+                  {subService.name}
                 </a>
-              ) : (
+              )}
+              {/* :(
                 <span className="unclickable-service-item" key={"list-of-service-item-" + Math.random()}>
-                  {link.name}
+                   {subService.name}
                 </span>
-              )
-            )}
+              ) */}
           </LabeledListOfServices>
         ))}
       </div>
