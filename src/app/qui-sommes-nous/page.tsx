@@ -28,15 +28,45 @@ interface Props extends PropsWithChildren {
   compagnyBranding: CompagnyBranding;
 }
 
-export default function AboutUsPage({
-  logo,
-  menuBarInfo,
-  services,
-  socialMedia,
-  contactBarInfo,
-  bannerInfo,
-  compagnyBranding,
-}: Props) {
+export default function AboutUsPage() {
+
+  var bannerInfo: BannerInfo = {
+    backgroundImagePath: "../assets/images/background-6.webp",
+    backgroundColor: "#002F17",
+    title: "BIENVENU CHEZ T & T HOLDING",
+    content: "L'expérience et l'expertise qui font la difference",
+    button: {
+      name: "DECOUVRIR NOS SERVICES",
+      link: "/",
+    },
+  };
+
+  var pageRoot = "/qui-sommes-nous"
+
+  var compagnyBranding: CompagnyBranding = {
+    title: "Notre engagement est votre satisfaction",
+    brandings: [
+      {
+        name: "Notre philosophie",
+        imagePath: "/assets/",
+        content:
+          "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
+      },
+      {
+        name: "Perspectives",
+        imagePath: "/assets/",
+        content:
+          "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
+      },
+      {
+        name: "Nos valeurs",
+        imagePath: "/assets/",
+        content:
+          "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
+      },
+    ],
+  };
+
   var aboutUs = {
     title: "A propos de T&T HOLDING GROUP",
     content:
@@ -102,8 +132,7 @@ export default function AboutUsPage({
   return (
     <>
       <HeaderBar
-        contactBarInfo={contactBarInfo}
-        menuBarInfo={menuBarInfo}
+        currentPageRoot = {pageRoot}
         bannerShouldBeDisplayed={false}
         bannerInfo={bannerInfo}
       />
@@ -168,7 +197,7 @@ export default function AboutUsPage({
           </div>
         </EmptySection>
       </main>
-      <Footer logo={logo} socialMedia={socialMedia} services={services} />
+      <Footer />
     </>
   );
 }

@@ -13,31 +13,24 @@ import ContactBarInfo from "@/types/contactbarinfo";
 import { default as IconButtonType } from "@/types/iconbutton";
 import menuBarInfo from "@/types/menubarinfo";
 import Service from "@/types/service";
-import CompagnyBranding from "@/types/compagnybranding";
+// import CompagnyBranding from "@/types/compagnybranding";
 import Form from "@/types/form";
 
 import "./joinourteam.scss";
 
 
 
-interface Props extends PropsWithChildren {
-  logo: IconButtonType;
-  menuBarInfo: menuBarInfo;
-  services: Service[];
-  socialMedia: IconButtonType[];
-  contactBarInfo: ContactBarInfo;
-  bannerInfo: BannerInfo;
-  compagnyBranding: CompagnyBranding;
-}
+// interface Props extends PropsWithChildren {
+//   logo: IconButtonType;
+//   menuBarInfo: menuBarInfo;
+//   services: Service[];
+//   socialMedia: IconButtonType[];
+//   contactBarInfo: ContactBarInfo;
+//   bannerInfo: BannerInfo;
+//   compagnyBranding: CompagnyBranding;
+// }
 
-export default function JoinOurTeamPage({
-  logo,
-  menuBarInfo,
-  services,
-  socialMedia,
-  contactBarInfo,
-  bannerInfo,
-}: Props) {
+export default function JoinOurTeamPage() {
   var presentation = {
     title: "Nous rejoindre",
     content:
@@ -86,13 +79,105 @@ export default function JoinOurTeamPage({
     buttonName: "ENVOYER",
   };
 
+  var logo: IconButtonType = {
+    name: "T and T Holding",
+    alt: "logo",
+    path: "/assets/logo/logo-square-no-bg.webp",
+    link: "/",
+  };
+  var services: Service[] = [
+    {
+      name: "services management",
+      subServices: [
+        {
+          name: "Consultation stratégique",
+          link: "",
+        },
+        {
+          name: "Planification financière",
+          link: "",
+        },
+        {
+          name: "Developpement",
+          link: "",
+        },
+        {
+          name: "Commercial",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "services immo",
+      subServices: [
+        {
+          name: "Placement de terrain",
+          link: "",
+        },
+        {
+          name: "Placement de logement",
+          link: "",
+        },
+        {
+          name: "Vente de terrain",
+          link: "",
+        },
+        {
+          name: "Location immobiliere",
+          link: "",
+        },
+      ],
+    },
+  ];
+
+  var socialMedia: IconButtonType[] = [
+    {
+      name: "facebook",
+      alt: "facebook",
+      path: "/assets/icons/facebook-icon.webp",
+      link: "",
+    },
+    {
+      name: "whatsapp",
+      alt: "whatsapp",
+      path: "/assets/icons/whatsapp-icon.webp",
+      link: "",
+    },
+    {
+      name: "twitter",
+      alt: "twitter",
+      path: "/assets/icons/twitter-icon.webp",
+      link: "",
+    },
+  ];
+
+  var contactBarInfo: ContactBarInfo = {
+    phone: "+237 XXX XXX XXX",
+    email: "contact@nomdedomaine.com",
+    socialMedia: socialMedia,
+  };
+
+  
+
+  var bannerInfo: BannerInfo = {
+    backgroundImagePath: "../assets/images/background-6.webp",
+    backgroundColor: "#002F17",
+    title: "BIENVENU CHEZ T & T HOLDING",
+    content: "L'expérience et l'expertise qui font la difference",
+    button: {
+      name: "DECOUVRIR NOS SERVICES",
+      link: "/",
+    },
+  };
+
+  var pageRoot = "/nous-rejoindre"
+
   var onValueChange = (event: ChangeEvent) => {};
 
   return (
     <>
       <HeaderBar
-        contactBarInfo={contactBarInfo}
-        menuBarInfo={menuBarInfo}
+        currentPageRoot = {pageRoot}
         bannerShouldBeDisplayed={false}
         bannerInfo={bannerInfo}
       />
@@ -131,7 +216,7 @@ export default function JoinOurTeamPage({
           ></ImageFrame>
         </EmptySection>
       </main>
-      <Footer logo={logo} socialMedia={socialMedia} services={services} />
+      <Footer />
     </>
   );
 }

@@ -14,6 +14,7 @@ interface Props extends PropsWithChildren
 {
     logo: IconButtonType
     tabs: Link[]
+    currentPageRoot:string
 }
 
 interface CustomTab {
@@ -23,7 +24,7 @@ interface CustomTab {
 }
 
 
-export default function HorizontalMenuBar({logo, tabs}:Props) {
+export default function HorizontalMenuBar({logo, tabs, currentPageRoot}:Props) {
   function onClick(key:string, tabs:CustomTab[]){
     for(var tab of tabs){
         if(tab.key != key)
@@ -36,7 +37,13 @@ export default function HorizontalMenuBar({logo, tabs}:Props) {
     let customTabs:CustomTab[] = tabs.map((item)=>{
         return {'key':'menu-item-'+Math.random(), 'tab':item, 'state':false}
     })
-    if(customTabs.length > 0) customTabs[0].state = true
+    if(customTabs.length > 0){
+        for(var customTab of customTabs)
+        {
+            if( customTab.tab.link==currentPageRoot)
+                customTab.state = true
+        }
+    }
 
     return (
         <div className="flex flex-row horizontal-menu-bar">

@@ -1,22 +1,14 @@
-import HomePage from '@/pages/home/home'
-import ContactPage from '@/pages/contact/contact';
-
+import HomePage from './acceuil/page'
 
 import BannerInfo from "@/types/bannerinfo";
 import ContactBarInfo from "@/types/contactbarinfo";
 import { default as IconButtonType } from "@/types/iconbutton";
-import Link from "@/types/link";
 import menuBarInfo from "@/types/menubarinfo";
 import Service from "@/types/service";
 import { default as OurCompagniesType } from "@/types/ourcompagnies";
-import Branding from "@/types/branding";
 import CompagnyBranding from "@/types/compagnybranding";
 import BrandingAbout from "@/types/brandingabout";
 import {default as ContactFrameType} from '@/types/contactframe';
-import AboutUsPage from '@/pages/aboutus/aboutus';
-import OurCompagnies from '@/pages/ourcompagnies/ourcompagnies';
-import CustomerOpignions from '@/pages/customeropignions/customeropignions';
-import JoinOurTeamPage from '@/pages/joinourteam/joinourteam';
 
 
 export default function Home() {
@@ -235,18 +227,18 @@ export default function Home() {
   
   return (
     <>
-      {/* <HomePage 
-        logo = {logo}
-        menuBarInfo = {menuBarInfo}
-        services = {services}
-        socialMedia = {socialMedia}
-        contactFrame = {contactFrame}
-        contactBarInfo = {contactBarInfo}
-        bannerInfo = {bannerInfo}
-        ourCompagnies = {ourCompagnies}
-        compagnyBranding = {compagnyBranding}
-        aboutFrame = {aboutFrame}
-      /> */}
+      <HomePage 
+        // logo = {logo}
+        // menuBarInfo = {menuBarInfo}
+        // services = {services}
+        // socialMedia = {socialMedia}
+        // contactFrame = {contactFrame}
+        // contactBarInfo = {contactBarInfo}
+        // bannerInfo = {bannerInfo}
+        // ourCompagnies = {ourCompagnies}
+        // compagnyBranding = {compagnyBranding}
+        // aboutFrame = {aboutFrame}
+      />
       {/* <ContactPage 
         logo = {logo}
         menuBarInfo = {menuBarInfo}
@@ -277,14 +269,14 @@ export default function Home() {
         contactBarInfo = {contactBarInfo}
         bannerInfo = {bannerInfo}
       /> */}
-      <CustomerOpignions
+      {/* <CustomerOpignions
         logo = {logo}
         menuBarInfo = {menuBarInfo}
         services = {services}
         socialMedia = {socialMedia}
         contactBarInfo = {contactBarInfo}
         bannerInfo = {bannerInfo}
-      />
+      /> */}
       {/* <JoinOurTeamPage 
         logo = {logo}
         menuBarInfo = {menuBarInfo}

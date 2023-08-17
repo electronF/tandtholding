@@ -9,7 +9,8 @@
         list-style: none;
     }
 
-    a:hover
+    a:hover,
+    .tab-is-active:hover
     {
         color: rgba($color: #FFFFFF, $alpha: 0.5);
     }

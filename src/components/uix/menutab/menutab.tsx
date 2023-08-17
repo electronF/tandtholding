@@ -3,7 +3,6 @@
 import {MouseEventHandler, PropsWithChildren } from "react";
 
 import { capitalize } from "@/utils/text"
-import Link from "@/types/link";
 
 import './menutab.scss';
 

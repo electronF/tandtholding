@@ -21,27 +21,112 @@ import { default as ContactFrameType } from "@/types/contactframe";
 import "./contact.scss";
 
 
-interface Props extends PropsWithChildren {
-  logo: IconButtonType;
-  menuBarInfo: menuBarInfo;
-  services: Service[];
-  socialMedia: IconButtonType[];
-  contactFrame: ContactFrameType;
-  contactBarInfo: ContactBarInfo;
-  bannerInfo: BannerInfo;
-  ourCompagnies: OurCompagniesType;
-  compagnyBranding: CompagnyBranding;
-  aboutFrame: BrandingAbout;
-}
+// interface Props extends PropsWithChildren {
+//   logo: IconButtonType;
+//   menuBarInfo: menuBarInfo;
+//   services: Service[];
+//   socialMedia: IconButtonType[];
+//   contactFrame: ContactFrameType;
+//   contactBarInfo: ContactBarInfo;
+//   bannerInfo: BannerInfo;
+//   ourCompagnies: OurCompagniesType;
+//   compagnyBranding: CompagnyBranding;
+//   aboutFrame: BrandingAbout;
+// }
 
-export default function ContactPage({
-  logo,
-  menuBarInfo,
-  services,
-  socialMedia,
-  contactBarInfo,
-  bannerInfo,
-}: Props) {
+export default function ContactPage() {
+  var logo: IconButtonType = {
+    name: "T and T Holding",
+    alt: "logo",
+    path: "/assets/logo/logo-square-no-bg.webp",
+    link: "/",
+  };
+
+  var services: Service[] = [
+    {
+      name: "services management",
+      subServices: [
+        {
+          name: "Consultation stratégique",
+          link: "",
+        },
+        {
+          name: "Planification financière",
+          link: "",
+        },
+        {
+          name: "Developpement",
+          link: "",
+        },
+        {
+          name: "Commercial",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "services immo",
+      subServices: [
+        {
+          name: "Placement de terrain",
+          link: "",
+        },
+        {
+          name: "Placement de logement",
+          link: "",
+        },
+        {
+          name: "Vente de terrain",
+          link: "",
+        },
+        {
+          name: "Location immobiliere",
+          link: "",
+        },
+      ],
+    },
+  ];
+
+  var socialMedia: IconButtonType[] = [
+    {
+      name: "facebook",
+      alt: "facebook",
+      path: "/assets/icons/facebook-icon.webp",
+      link: "",
+    },
+    {
+      name: "whatsapp",
+      alt: "whatsapp",
+      path: "/assets/icons/whatsapp-icon.webp",
+      link: "",
+    },
+    {
+      name: "twitter",
+      alt: "twitter",
+      path: "/assets/icons/twitter-icon.webp",
+      link: "",
+    },
+  ];
+
+  var contactBarInfo: ContactBarInfo = {
+    phone: "+237 XXX XXX XXX",
+    email: "contact@nomdedomaine.com",
+    socialMedia: socialMedia,
+  };
+
+  var bannerInfo: BannerInfo = {
+    backgroundImagePath: "../assets/images/background-6.webp",
+    backgroundColor: "#002F17",
+    title: "BIENVENU CHEZ T & T HOLDING",
+    content: "L'expérience et l'expertise qui font la difference",
+    button: {
+      name: "DECOUVRIR NOS SERVICES",
+      link: "/",
+    },
+  };
+
+  var pageRoot = '/contact'
+  
   var contactUs = {
     'title':'Nous contacter',
     'content':'Vous pouvez nous ecrire en remplissant le formulaire ci dessous. Nous allons vous recontacter au plus vite',
@@ -67,8 +152,7 @@ export default function ContactPage({
   return (
     <>
       <HeaderBar
-        contactBarInfo={contactBarInfo}
-        menuBarInfo={menuBarInfo}
+        currentPageRoot = {pageRoot}
         bannerShouldBeDisplayed = {false}
         bannerInfo={bannerInfo}
       />
@@ -99,7 +183,7 @@ export default function ContactPage({
           </div>
         </EmptySection>
       </main>
-      <Footer logo={logo} socialMedia={socialMedia} services={services} />
+      <Footer />
     </>
   );
 }

@@ -12,10 +12,11 @@ interface Props extends PropsWithChildren
     menuBarInfo: MenuBarInfo
     bannerInfo?: BannerInfo
     bannerShouldBeDisplayed:boolean
+    currentPageRoot:string
 }
 
 
-export default function Banner({menuBarInfo, bannerInfo, bannerShouldBeDisplayed}:Props) {
+export default function Banner({menuBarInfo, bannerInfo, bannerShouldBeDisplayed, currentPageRoot}:Props) {
     return (
     <section 
         className='flex flex-col justify-start banner' 
@@ -25,7 +26,7 @@ export default function Banner({menuBarInfo, bannerInfo, bannerShouldBeDisplayed
             height:  (bannerShouldBeDisplayed==true)?`400px`:'auto'
             }}
     >
-        <HorizontalMenuBar  logo={menuBarInfo.logo} tabs={menuBarInfo.tabs}/>
+        <HorizontalMenuBar  logo={menuBarInfo.logo} tabs={menuBarInfo.tabs} currentPageRoot={currentPageRoot}/>
         {
             (bannerShouldBeDisplayed==true)?<div className='flex flex-col justify-between banner-info'>
                 <h1 className='title'>{bannerInfo?.title}</h1>
