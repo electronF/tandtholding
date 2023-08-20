@@ -44,25 +44,25 @@ export default function OurCompagnies() {
       },
       subServices: [
         {
-          imagePath: "",
+          imagePath: "/assets/images/background-7.webp",
           name: "Placement de terrain",
           content:
             "Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa",
         },
         {
-          imagePath: "",
+          imagePath: "/assets/images/background-7.webp",
           name: "Placement de logement",
           content:
             "Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus",
         },
         {
-          imagePath: "",
+          imagePath: "/assets/images/background-7.webp",
           name: "Vente de terrain",
           content:
             "Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa",
         },
         {
-          imagePath: "",
+          imagePath: "/assets/images/background-7.webp",
           name: "Location immobilière",
           content:
             "Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus",
@@ -79,25 +79,25 @@ export default function OurCompagnies() {
       },
       subServices: [
         {
-          imagePath: "",
+          imagePath: "/assets/images/background-7.webp",
           name: "Consultation stratégique",
           content:
             "Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa",
         },
         {
-          imagePath: "",
+          imagePath: "/assets/images/background-7.webp",
           name: "Planification financière",
           content:
             "Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus",
         },
         {
-          imagePath: "",
+          imagePath: "/assets/images/background-7.webp",
           name: "Développement commercial",
           content:
             "Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa",
         },
         {
-          imagePath: "",
+          imagePath: "/assets/images/background-7.webp",
           name: "Service management 4",
           content:
             "Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus",

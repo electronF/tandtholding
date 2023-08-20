@@ -9,15 +9,14 @@
         list-style: none;
     }
 
-    a:hover,
-    .tab-is-active:hover
+    a:hover
     {
         color: rgba($color: #FFFFFF, $alpha: 0.5);
     }
 
     span
     {
-        width: inherit;
+        width: 100px;
         margin: 0 5px;
         height: 5px;
         background-color: transparent;

@@ -11,7 +11,20 @@ import BrandingAbout from "@/types/brandingabout";
 import {default as ContactFrameType} from '@/types/contactframe';
 
 
+
+
 export default function Home() {
+
+  // if (
+  //   typeof window !== "undefined" &&
+  //   typeof window.navigator !== "undefined" &&
+  //   typeof navigator !== "undefined" &&
+  //   navigator.userAgent
+  // ) {
+  //   const disableDevtool = require("disable-devtool");
+  //   disableDevtool();
+  // }
+
   var logo: IconButtonType = {
     name: "T and T Holding",
     alt: "logo",
@@ -195,19 +208,19 @@ export default function Home() {
     brandings: [
       {
         name: "Notre philosophie",
-        imagePath: "/assets/",
+        imagePath: "/assets/images/background-7.webp",
         content:
           "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
       },
       {
         name: "Perspectives",
-        imagePath: "/assets/",
+        imagePath: "/assets/images/background-7.webp",
         content:
           "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
       },
       {
         name: "Nos valeurs",
-        imagePath: "/assets/",
+        imagePath: "/assets/images/background-7.webp",
         content:
           "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
       },

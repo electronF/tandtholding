@@ -48,19 +48,19 @@ export default function AboutUsPage() {
     brandings: [
       {
         name: "Notre philosophie",
-        imagePath: "/assets/",
+        imagePath: "/assets/images/background-5.webp",
         content:
           "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
       },
       {
         name: "Perspectives",
-        imagePath: "/assets/",
+        imagePath: "/assets/images/background-5.webp",
         content:
           "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
       },
       {
         name: "Nos valeurs",
-        imagePath: "/assets/",
+        imagePath: "/assets/images/background-5.webp",
         content:
           "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
       },
@@ -77,7 +77,7 @@ export default function AboutUsPage() {
     services: [
       {
         name: "T&T Management",
-        imagePath: "",
+        imagePath: "/assets/images/background-4.webp",
         subServices: [
           "Consultation stratégique",
           "Planification financière",
@@ -87,7 +87,7 @@ export default function AboutUsPage() {
       },
       {
         name: "T&T Immo",
-        imagePath: "",
+        imagePath: "/assets/images/background-3.webp",
         subServices: [
           "Placement de terrain",
           "Placement de logement",
@@ -105,25 +105,25 @@ export default function AboutUsPage() {
       {
         name: "",
         alt: "",
-        path: "",
+        path: "/assets/images/background-4.webp",
         link: "",
       },
       {
         name: "",
         alt: "",
-        path: "",
+        path: "/assets/images/background-4.webp",
         link: "",
       },
       {
         name: "",
         alt: "",
-        path: "",
+        path: "/assets/images/background-7.webp",
         link: "",
       },
       {
         name: "",
         alt: "",
-        path: "",
+        path: "/assets/images/background-4.webp",
         link: "",
       },
     ],

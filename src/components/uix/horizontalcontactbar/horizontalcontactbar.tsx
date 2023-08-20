@@ -41,6 +41,7 @@ export default function HorizontalContactBar({phone, email, socialMedia}:Props) 
             />
             <a href={'mailto:'+email}>{email}</a>
         </div>
+
         <div className='flex flex-row section justify-end'>
             {
                 socialMedia.map((item)=>(

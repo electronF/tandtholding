@@ -93,19 +93,19 @@ export default function HomePage() {
     brandings: [
       {
         name: "Notre philosophie",
-        imagePath: "/assets/",
+        imagePath: "/assets/images/background-5.webp",
         content:
           "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
       },
       {
         name: "Perspectives",
-        imagePath: "/assets/",
+        imagePath: "/assets/images/background-5.webp",
         content:
           "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
       },
       {
         name: "Nos valeurs",
-        imagePath: "/assets/",
+        imagePath: "/assets/images/background-5.webp",
         content:
           "Ut amet necessitatibus ut placeat galisum sed incidunt error. Et vero corporis et enim quis quo sequi asperiores",
       },

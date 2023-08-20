@@ -120,14 +120,14 @@ export default function CustomerOpignions() {
   var title = "Ce que nos clients pensent de nous";
   var customersOpignions: CustomerOpigion[] = [
     {
-      imagePath: "",
+      imagePath: "/assets/images/background-7.webp",
       content:
         "temoignage client sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa",
       customerName: "Carole Jeanne",
       customerRole: "Commerciale Afrilex",
     },
     {
-      imagePath: "",
+      imagePath: "/assets/images/background-7.webp",
       content:
         "temoignage client sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa Description ici sit amet, consectetur adipiscing elit. Phasellus sodales tellus eleifend massa",
       customerName: "Jean Claude",

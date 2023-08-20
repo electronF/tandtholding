@@ -11,5 +11,21 @@
     .sub-service-frame-presentation
     {
         margin-left: 20px;
+
+        .sub-service-frame-presentation-title
+        {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .sub-service-frame-presentation-content
+        {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 300;
+        }
     }
+
+    
 }

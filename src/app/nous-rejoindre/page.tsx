@@ -160,7 +160,7 @@ export default function JoinOurTeamPage() {
   
 
   var bannerInfo: BannerInfo = {
-    backgroundImagePath: "../assets/images/background-6.webp",
+    backgroundImagePath: "../assets/images/background-7.webp",
     backgroundColor: "#002F17",
     title: "BIENVENU CHEZ T & T HOLDING",
     content: "L'expérience et l'expertise qui font la difference",

@@ -119,6 +119,12 @@
             {
                 margin: 0 25px;
                 background-color: white;
+                
+                img
+                {
+                    max-width: 64px;
+                    max-height: 64px;
+                }
             }
 
             .icon-button:first-child
