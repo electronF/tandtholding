@@ -1,3 +1,6 @@
+@import "../variables";
+
+
 .empty-section:first-child
 {
     align-items: center;
@@ -43,4 +46,48 @@
     {
         margin-right: 0;
     }
+}
+
+
+@media only screen and (device-max-width: $tab-max-width),
+only screen and (max-width: $tab-max-width)
+{
+    .empty-section:first-child
+    {
+        .branding-about-frame
+        {
+            width: auto;
+        }
+    }
+
+    .empty-section
+    {
+        .presentation-title
+        {
+            text-align: center;
+        }
+
+        .brandings
+        {
+            flex-direction: column;
+            align-items: center;
+
+            .branding-frame
+            {
+                width: 80%;
+                margin: 25px 0;
+            }
+
+            .branding-frame:first-child
+            {
+                margin-top: 0;
+            }
+
+            .branding-frame:last-child
+            {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
 }

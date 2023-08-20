@@ -1,3 +1,6 @@
+@import "../variables";
+
+
 .empty-section
 {
     flex: 1;
@@ -60,4 +63,29 @@
 .contact-frame
 {
     margin-top: auto;
+}
+
+@media only screen and (device-max-width: $phone-max-width),
+only screen and (max-width: $phone-max-width)
+{
+    .empty-section
+    {
+        .compagny-service-presentation
+        {
+            .compagny-frame
+            {
+                margin-right: 0;
+                margin-bottom: 50px;
+
+                flex-direction: column;
+
+                >div
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center !important;
+                }
+            }
+        }
+    }
 }

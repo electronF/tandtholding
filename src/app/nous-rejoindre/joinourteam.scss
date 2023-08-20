@@ -1,3 +1,6 @@
+@import "../variables";
+
+
 .empty-section
 {
     flex-direction: row;
@@ -52,5 +55,27 @@
     .image-frame
     {
         flex: 1 0 45%;
+    }
+}
+
+@media only screen and (device-max-width: $tab-max-width),
+only screen and (max-width: $tab-max-width)
+{
+    .empty-section
+    {
+        flex-direction: column-reverse;
+
+        .join-our-team-information
+        {
+            flex: 1;
+            margin-right: 0;
+            margin-top: 30px;
+        }
+
+        .image-frame
+        {
+            flex: 1;
+            min-height: 200px;
+        }
     }
 }

@@ -1,3 +1,6 @@
+@import "../variables";
+
+
 .empty-section
 {
     flex: 1;
@@ -22,4 +25,32 @@
             margin: 20px 0;
         }   
     }
+}
+
+@media only screen and (device-max-width: $tab-max-width),
+only screen and (max-width: $tab-max-width)
+{
+    .customer-opignions-title
+    {
+        text-align: center;
+    }
+
+    .empty-section
+    {
+        .customers-opignions-list
+        {
+            .customer-opignion-frame
+            {
+                width: auto;
+                flex-direction: column;
+                margin-bottom: 40px;
+
+                .customer-opignion
+                {
+                    margin-top: 20px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }   
 }

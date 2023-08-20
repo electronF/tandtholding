@@ -116,7 +116,7 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className="flex flex-row">
+      <div className="flex flex-row list-of-labeled-list-of-services">
         {services.map((service) => (
           <LabeledListOfServices
             name={service.name}

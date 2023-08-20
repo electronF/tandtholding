@@ -1,10 +1,12 @@
+@import "../../app/variables";
+
+
 .banner
 {
     width: 100%;
     background-color: var(--banner);
     background-repeat: no-repeat;
     background-size: cover;
-    // background-attachment: fixed;
     background-position: center;
 
     .horizontal-menu-bar
@@ -48,5 +50,22 @@
         {
             background-color: rgba(var(--section-green-rgb), .8);
         }
+    }
+}
+
+@media screen and (max-device-width: $tab-max-width),
+screen and (max-width: $tab-max-width) 
+{
+    .banner
+    {
+        .banner-info
+        {
+            padding: 30px 50px;
+            .title
+            {
+                font-size: 32px;
+            }
+        }
+
     }
 }

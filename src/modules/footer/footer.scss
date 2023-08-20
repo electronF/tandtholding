@@ -1,3 +1,6 @@
+@import "../../app/variables";
+
+
 .footer
 {
     padding: 40px 50px;
@@ -25,26 +28,60 @@
         }
     }
 
-    .labeled-list-of-services
+    .list-of-labeled-list-of-services
     {
-        color: var(--text-white);
-        margin-right: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: center;
 
-        .clickable-service-item,
-        .unclickable-service-item
+        .labeled-list-of-services
         {
-            font-weight: 300;
-            padding: 5px 0;
+            color: var(--text-white);
+            margin-right: 50px;
+
+            .clickable-service-item,
+            .unclickable-service-item
+            {
+                font-weight: 300;
+                padding: 5px 0;
+            }
+
+            .clickable-service-item:hover
+            {
+                opacity: 0.8;
+            }
         }
 
-        .clickable-service-item:hover
+        .labeled-list-of-services:last-child
         {
-            opacity: 0.8;
+            margin-right: 0;
         }
     }
+}
 
-    .labeled-list-of-services:last-child
+@media only screen and (device-max-width: $tab-max-width),
+only screen and (max-width: $tab-max-width)
+{
+    .footer
     {
-        margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+
+        .list-of-labeled-list-of-services
+        {
+            .labeled-list-of-services
+            {
+                margin: 25px 15px;
+                width: fit-content;
+
+                .title
+                {
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
 }

@@ -1,3 +1,6 @@
+@import "../../../app/variables";
+
+
 .horizontal-menu-bar
 {
     padding: 2px 30px;
@@ -36,7 +39,7 @@
             span
             {
                 align-self: center;
-                width: 100%;
+                width: 100% !important;
                 height: 3px;
                 background-color: #FFFFFF;
 
@@ -60,8 +63,9 @@
     }
 }
 
-@media only screen and (max-device-width: 610px),  
-only screen and (max-width: 610px)
+
+@media only screen and (max-device-width: $tab-max-width),  
+only screen and (max-width: $tab-max-width)
 {
     .horizontal-menu-bar
     {
@@ -98,7 +102,28 @@ only screen and (max-width: 610px)
                     {
                         width: 100%;
                         align-self: center;
+                        margin: 0;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-device-width: 1068px),  
+only screen and (max-width: 1068px)
+{
+    .horizontal-menu-bar
+    {
+        .menu-bar
+        {
+            .menu-tabs
+            {
+                .menu-tab
+                {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    width: fit-content;
                 }
             }
         }

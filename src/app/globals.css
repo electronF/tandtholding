@@ -26,6 +26,11 @@
   --text-green: #2AB572;
   --text-underline: #FFF3A8;
   --text-white: #FFFFFF;
+
+  --phone-max-width: 414px;
+  --tab-min-width: 415px;
+  --tab-max-width: 860px;
+  --pc-min-width: 861px;
   
   /* FontSize */
   --menu-medium-font-size: 12px;

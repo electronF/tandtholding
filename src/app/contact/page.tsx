@@ -173,9 +173,12 @@ export default function ContactPage() {
           </form>
 
           <h2 className="sub-title">{'Autres informations de contact'}</h2>
-          <div className="flex flex-row">
+          <div className="flex flex-row list-of-labeled-sections">
             {
-              contactUs.contacts.map((item)=> <LabeledSection title={item.title} content={item.content} key={'labeled-section-'+Math.random()}/>)
+              contactUs.contacts.map((item)=> 
+              <LabeledSection title={item.title} key={'labeled-section-'+Math.random()}>
+                <p className='section-content'>{item.content}</p>
+              </LabeledSection>)
             }
           </div>
           <div className="contact-map">

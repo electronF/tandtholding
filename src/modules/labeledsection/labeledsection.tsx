@@ -1,20 +1,20 @@
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren, ReactNode } from 'react'
 
 import './labeledsection.scss'
 
 interface Props extends PropsWithChildren
 {
     title:string
-    content: string
+    children: ReactNode
 }
 
 
-export default function LabeledSection({title, content}:Props)
+export default function LabeledSection({title, children}:Props)
 {
     return (
         <div className='flex flex-col labeled-section'>
             <span className='section-title'>{title}</span>
-            <p className='section-content'>{content}</p>
+            {children}
         </div>
     )
 }
